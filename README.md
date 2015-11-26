@@ -32,7 +32,7 @@ Take the repo url, and that is the name of the template to be used when using th
 
 ```bash
 $ sudo npm install -g ionic cordova
-$ ionic start myApp https://github.com/inmagik/ionic-starter-sidemenuplus.git
+$ ionic start myApp https://github.com/inmagik/ionic-starter-sidemenuplus
 ```
 
 Then, to run it, cd into `myApp` and run:
