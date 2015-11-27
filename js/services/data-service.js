@@ -2,7 +2,6 @@
 "use strict";
 
 angular.module("app")
-
 .factory('DataServiceRestangular', DataServiceRestangular);
 
 function DataServiceRestangular(Restangular, baseServerUrl){
@@ -11,7 +10,7 @@ function DataServiceRestangular(Restangular, baseServerUrl){
 
         // Example configuration of httpFields
         /*
-        RestangularProvider.setDefaultHttpFields({
+        RestangularConfigurer.setDefaultHttpFields({
             'withCredentials': false
         });
         */
@@ -19,7 +18,7 @@ function DataServiceRestangular(Restangular, baseServerUrl){
         /* Custom response extractor for Restangular  */
         /* This one plays well with djangorestframework */
         /*
-        RestangularProvider.setResponseExtractor(function(response, operation, what, url) {
+        RestangularConfigurer.setResponseExtractor(function(response, operation, what, url) {
         var newResponse;
         if (operation === "getList") {
             newResponse = response.results != undefined ? response.results : response;
@@ -39,13 +38,13 @@ function DataServiceRestangular(Restangular, baseServerUrl){
         /* Restangular requestSuffix, appended to all urls -- plays well with django */
         
         /*
-        RestangularProvider.setRequestSuffix('/?');
+        RestangularConfigurer.setRequestSuffix('/?');
         */
 
     });
 }
 
-
+angular.module("app")
 .factory('DataService', DataService);
 
 function DataService(DataServiceRestangular){
